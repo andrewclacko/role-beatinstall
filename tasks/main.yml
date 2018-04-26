@@ -1,6 +1,5 @@
 ---
-- name: copying over metricbeat installer 
-- name: Extract beats into /tmp
+- name: Copy and Extract beats into /tmp
   unarchive:
     src: metricbeat-5.6.5-linux-x86_64.tar.gz
     dest: /tmp/metricbeat-5.6.5-linux-x86_64
