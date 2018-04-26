@@ -1,4 +1,4 @@
 ---
-- name: check disk status
-  shell: cat /etc/hostname
+- name: copying over metricbeat installer 
+  shell: 
 
