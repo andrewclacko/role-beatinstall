@@ -1,4 +1,4 @@
 ---
 - name: check disk status
-  shell: df -h
+  shell: cat /etc/hostname
 
