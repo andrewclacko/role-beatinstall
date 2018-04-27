@@ -1,7 +1,7 @@
 ---
 - name: Copy and Extract beats into /tmp
-  unarchive:
-    src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar.gz
+  copy:
+    src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.rpm
     dest: /tmp
 
 - name: install beats type
