@@ -2,10 +2,12 @@
 - name: Copy and Extract beats into /tmp
   unarchive:
     src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar.gz
-    dest: /tmp/
+    dest: /tmp
 
 - name: untar file
-  shell: tar -xvf /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar
+  unarchive: 
+    src: tar -xvf /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar
+    dest: /tmp
 
 - name: install beats type
   shell: rpm -ivh /tmp/{{ beats }}-{{ version }}-linux-x86_64
