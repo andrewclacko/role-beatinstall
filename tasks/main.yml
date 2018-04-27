@@ -5,7 +5,5 @@
     dest: /tmp/
 
 - name: install beats type
-  shell: rpm -ivh {{ beats }}-{{ version }}-linux-x86_64.tar.gz
-  args: 
-    chdir: /tmp
+  shell: rpm -ivh /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar.gz
 
