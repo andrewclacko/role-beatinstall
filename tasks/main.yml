@@ -3,6 +3,7 @@
   copy:
     src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.rpm
     dest: /tmp/
+    remote_src: yes
 
 - name: install beats type
   shell: rpm -ivh /tmp/{{ beats }}-{{ version }}-linux-x86_64
