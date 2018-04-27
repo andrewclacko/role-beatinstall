@@ -4,11 +4,6 @@
     src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar.gz
     dest: /tmp
 
-- name: untar file
-  unarchive: 
-    src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar
-    dest: /tmp
-
 - name: install beats type
   shell: rpm -ivh /tmp/{{ beats }}-{{ version }}-linux-x86_64
 
