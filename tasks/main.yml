@@ -10,3 +10,4 @@
     name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
   become: yes
   become_user: root
+  become_method: sudo
