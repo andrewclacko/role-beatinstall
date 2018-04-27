@@ -6,5 +6,6 @@
     remote_src: no
 
 - name: install beats type
-  shell: rpm -ivh /tmp/{{ beats }}-{{ version }}-x86_64
-
+  yum: 
+    name: /tmp/{{ beats }}-{{ version }}-x86_64
+  become: yes
