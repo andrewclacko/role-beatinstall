@@ -4,6 +4,12 @@
     src: /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar.gz
     dest: /tmp/
 
+- name: extract file
+  shell: unzip /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar.gz
+
+- name: untar file
+  shell: tar -xvf /tmp/{{ beats }}-{{ version }}-linux-x86_64.tar
+
 - name: install beats type
   shell: rpm -ivh /tmp/{{ beats }}-{{ version }}-linux-x86_64
 
