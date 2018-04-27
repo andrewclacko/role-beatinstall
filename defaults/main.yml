@@ -1,4 +1,6 @@
 ---
-# defaults file for dfrole
+# defaults file for beatinstall
+beats: 
+version: 
 
 
