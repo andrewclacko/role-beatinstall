@@ -5,11 +5,16 @@
     dest: /tmp/
     remote_src: no
 
-- name: install beats type
-  yum: 
-    name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
+- name: remove previous verison
+  yum:
+    name: metricbeat
+    state: absent
 
-- name:
-  template:
-    src: metricbeat.j2
-    dest: /etc/metricbeat/metricbeat.yml
+#- name: install beats type
+#  yum: 
+#    name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
+
+#- name:
+#  template:
+#    src: metricbeat.j2
+#    dest: /etc/metricbeat/metricbeat.yml
