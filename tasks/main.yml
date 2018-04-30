@@ -25,9 +25,9 @@
     name: metricbeat
     state: started
 
-#- name: Enable service metricbeat after reboot.
-#  service:
-#    name: metricbeat
-#    enabled: yes
+- name: Enable service metricbeat after reboot.
+  service:
+    name: metricbeat
+    enabled: yes
 
 
