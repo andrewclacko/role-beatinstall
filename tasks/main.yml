@@ -22,12 +22,12 @@
 
 - name: starting the metricbeat service
   service:
-    name: {{ type }}beat
+    name: "{{ type }}"beat
     state: started
 
 - name: Enable service metricbeat after reboot.
   service:
-    name: {{ type }}beat
+    name: "{{ type }}"beat
     enabled: yes
 
 
