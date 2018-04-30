@@ -10,11 +10,12 @@
     name: metricbeat
     state: absent
 
-#- name: install beats type
-#  yum: 
-#    name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
+- name: install beats type
+  yum: 
+    name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
+    state: present
 
-#- name:
-#  template:
-#    src: metricbeat.j2
-#    dest: /etc/metricbeat/metricbeat.yml
+- name:
+  template:
+    src: metricbeat.j2
+    dest: /etc/metricbeat/metricbeat.yml
