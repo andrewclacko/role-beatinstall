@@ -7,22 +7,22 @@
 
 - name: remove previous verison
   yum:
-    name: metricbeat
+    name: "{{ beats }}"
     state: absent
 
-- name: install beats type
+- name: installing "{{ beats }}"
   yum: 
     name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
     state: present
 
 - name: copying over metricbeat.yml template
   template:
-    src: {{ beats }}.j2
+    src: "{{ beats }}".j2
     dest: /etc/{{ beats }}/{{ beats }}.yml
 
 - name: starting the metricbeat service
   service:
-    name: {{ beats }}
+    name: "{{ beats }}"
     state: started
 
 - name: Enable service metricbeat after reboot.
