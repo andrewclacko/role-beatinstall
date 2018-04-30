@@ -15,7 +15,19 @@
     name: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
     state: present
 
-- name:
+- name: copying over metricbeat.yml template
   template:
     src: metricbeat.j2
     dest: /etc/metricbeat/metricbeat.yml
+
+- name: starting the metricbeat service
+  service:
+    name: metricbeat
+    state: started
+
+#- name: Enable service metricbeat after reboot.
+#  service:
+#    name: metricbeat
+#    enabled: yes
+
+
