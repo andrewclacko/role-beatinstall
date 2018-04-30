@@ -17,7 +17,7 @@
 
 - name: copying over metricbeat.yml template
   template:
-    src: "{{ beats }}".j2 
+    src: {{ beats }}.j2 
     dest: /etc/{{ beats }}/{{ beats }}.yml
 
 - name: starting the metricbeat service
