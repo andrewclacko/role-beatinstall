@@ -30,4 +30,8 @@
     name: "{{ beats }}"
     enabled: yes
 
+- name: Removing {{ beats }} file.
+  file:
+    src: /tmp/{{ beats }}-{{ version }}-x86_64.rpm
+    state: absent
 
