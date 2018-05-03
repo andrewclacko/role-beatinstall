@@ -1,7 +1,7 @@
 Role Name
 =========
+This role deploys beats to a windows server.  It will remove all previous versions and copy over the beat.yml templates.
 
-A brief description of the role goes here.
 
 Requirements
 ------------
@@ -10,6 +10,25 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 
 Role Variables
 --------------
+
+The associated playbook variable in group_vars/all has a variable of source
+source is the path to where the installer package resided, it is currently set to the elastic download page.
+
+The role has command line variables:
+
+-e "beats=metricbeat/filebeat version=6.0.1 role=servicefabric logstaship=IPADDRESS"
+
+Therefore variables are:
+
+# Desired beat to be installed
+beats:
+# Desired version of beats
+version:
+# Server role, e.g. servicefabric
+role:
+# Ip address of the logstash server
+logstaship:
+
 
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
